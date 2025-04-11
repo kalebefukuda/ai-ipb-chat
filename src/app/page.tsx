@@ -37,7 +37,7 @@ export default function Chat() {
   }
 
   return (
-    <div className="fixed inset-0 h-screen w-full flex flex-col items-center justify-center bg-[#022018] gap-3 lg:p-10">
+    <div className="h-screen w-full flex flex-col items-center justify-center bg-[#022018] gap-3">
       <div className="flex flex-col w-full max-w-md h-full bg-white border border-green-900 md:rounded-lg shadow-xl">
         <div className="bg-[#00573f] text-white py-3 px-4 flex items-center gap-3">
           <Image src="/logo-ipb.png" alt="Logo" width={40} height={40} className="rounded-full" />
@@ -118,7 +118,7 @@ export default function Chat() {
         </div>
 
 
-        <div className="border-t border-gray-200 bg-gray-50 p-3 shrink-0">
+        <div className="border-t border-gray-200 bg-gray-50 p-3 shrink-0 ">
           <form onSubmit={handleSubmit} className="flex items-center space-x-2">
             <input
               type="text"

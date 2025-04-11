@@ -23,6 +23,13 @@ export async function POST(req: Request) {
     toolChoice: 'auto',
   })
 
+  if (!result || (!result.text && !result.toolResults?.[0]?.result?.resultado)) {
+    return Response.json({
+      role: "assistant",
+      content: "Desculpe, não consegui gerar uma resposta no momento.",
+    });
+  }
+
   return Response.json({
     role: "assistant",
     content: result.toolResults?.[0]?.result?.resultado || result.text,

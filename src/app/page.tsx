@@ -67,27 +67,25 @@ export default function Chat() {
                     : "bg-[#f2f2ee] text-[#1f2d1f] rounded-bl-none"
                 }`}>
 
-                <ReactMarkdown
-                  components={{
-                    p: ({ node, ...props }) => (
-                      <p
-                        {...props}
-                        className="prose prose-sm max-w-full dark:prose-invert [&>p]:m-0"
-                      />
-                    ),
-                    a: ({ node, ...props }) => (
-                      <a
-                        {...props}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-green-700 hover:underline break-all"
-                      />
-                    ),
-                  }}
-                >
-                  {message.content}
-                </ReactMarkdown>
-
+                <div className={message.role === "user" ? "text-white" : "text-[#1f2d1f]"}>
+                  <ReactMarkdown
+                    components={{
+                      p: (props) => <p {...props} className="[&>p]:m-0" />,
+                      a: (props) => (
+                        <a
+                          {...props}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`break-all underline-offset-2 ${
+                            message.role === "user" ? "text-white underline" : "text-green-700 hover:underline"
+                          }`}
+                        />
+                      ),
+                    }}
+                  >
+                    {message.content}
+                  </ReactMarkdown>
+                </div>
               </div>
 
               {message.role === "user" && (

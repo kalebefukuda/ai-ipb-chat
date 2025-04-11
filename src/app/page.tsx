@@ -37,9 +37,9 @@ export default function Chat() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#022018] gap-3">
+    <div className="h-screen w-full flex justify-center bg-[#022018]">
       <h1 className="text-white hidden md:block">Em teste...</h1>
-      <div className="w-full h-[100dvh] md:h-[700px] max-w-md md:rounded-lg flex flex-col overflow-hidden shadow-xl border border-green-900 bg-white">
+      <div className="flex flex-col w-full max-w-md h-full md:h-[700px] bg-white border border-green-900 md:rounded-lg shadow-xl">
         <div className="bg-[#00573f] text-white py-3 px-4 flex items-center gap-3">
           <Image src="/logo-ipb.png" alt="Logo" width={40} height={40} className="rounded-full" />
           <h1 className="font-semibold text-base">Igreja Presbiteriana do Brasil</h1>

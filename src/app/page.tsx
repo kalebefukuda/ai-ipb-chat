@@ -39,7 +39,7 @@ export default function Chat() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#022018] gap-3">
       <h1 className="text-white hidden md:block">Em teste...</h1>
-      <div className="w-full max-w-md h-screen md:h-[700px] flex flex-col overflow-hidden shadow-xl border border-green-900 bg-white">
+      <div className="w-full h-[100dvh] md:h-[700px] max-w-md md:rounded-lg flex flex-col overflow-hidden shadow-xl border border-green-900 bg-white">
         <div className="bg-[#00573f] text-white py-3 px-4 flex items-center gap-3">
           <Image src="/logo-ipb.png" alt="Logo" width={40} height={40} className="rounded-full" />
           <h1 className="font-semibold text-base">Igreja Presbiteriana do Brasil</h1>
@@ -119,7 +119,7 @@ export default function Chat() {
         </div>
 
 
-        <div className="border-t border-gray-200 bg-gray-50 p-3">
+        <div className="border-t border-gray-200 bg-gray-50 p-3 shrink-0">
           <form onSubmit={handleSubmit} className="flex items-center space-x-2">
             <input
               type="text"

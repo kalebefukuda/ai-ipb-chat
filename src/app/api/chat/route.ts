@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   const lastMessage = messages[messages.length - 1]?.content || ""
 
   const result = await generateText({
-    model: google("gemini-2.5-pro-exp-03-25"),
+    model: google("gemini-1.5-flash"),
     system: `
             Você é um especialista na Igreja Presbiteriana do Brasil.
             Sempre que o usuário fizer uma pergunta que exija uma busca em documentos ou sites da IPB, utilize a ferramenta searchDocIPB.

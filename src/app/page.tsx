@@ -6,11 +6,6 @@ import { Button } from "@/components/ui/button"
 import ReactMarkdown from "react-markdown"
 import Image from "next/image"
 
-type Message = {
-  role: "user" | "assistant"
-  content: string
-}
-
 export default function Chat() {
   const {
     messages,
